@@ -14,10 +14,10 @@
 ## Install
 
 ```sh
-go get -u github.com/ipfs/go-ipfs-api
+go get -u github.com/ClubNFT/go-ipfs-api
 ```
 
-This will download the source into `$GOPATH/src/github.com/ipfs/go-ipfs-api`.
+This will download the source into `$GOPATH/src/github.com/ClubNFT/go-ipfs-api`.
 
 ## Usage
 
@@ -31,30 +31,30 @@ Add a file with the contents "hello world!":
 package main
 
 import (
-	"fmt"
-	"strings"
-    	"os"
-
-    	shell "github.com/ipfs/go-ipfs-api"
+    "fmt"
+    "strings"
+    "os"
+    
+    shell "github.com/ClubNFT/go-ipfs-api"
 )
 
 func main() {
-	// Where your local node is running on localhost:5001
-	sh := shell.NewShell("localhost:5001")
-	cid, err := sh.Add(strings.NewReader("hello world!"))
-	if err != nil {
+    // Where your local node is running on localhost:5001
+    sh := shell.NewShell("localhost:5001")
+    cid, err := sh.Add(strings.NewReader("hello world!"))
+    if err != nil {
         fmt.Fprintf(os.Stderr, "error: %s", err)
         os.Exit(1)
-	}
+    }
     fmt.Printf("added %s", cid)
 }
 ```
 
-For a more complete example, please see: https://github.com/ipfs/go-ipfs-api/blob/master/tests/main.go
+For a more complete example, please see: https://github.com/ClubNFT/go-ipfs-api/blob/master/tests/main.go
 
 ## Contribute
 
-Contributions are welcome! Please check out the [issues](https://github.com/ipfs/go-ipfs-api/issues).
+Contributions are welcome! Please check out the [issues](https://github.com/ClubNFT/go-ipfs-api/issues).
 
 ### Want to hack on IPFS?
 
